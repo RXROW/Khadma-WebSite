@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../image/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(9, 0, 31, 0.37);
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+
+ 
+  background-color: #020009d8;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 10px 100px;
+  position: fixed;
+  top: 0;
+}
+
+.navbar .logo {
+  color: #e01a4f;
+  font-size: 30px;
+}
+
+.navbar .nav-links {
+  list-style: none;
+}
+
+.navbar .nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: all .3s ease-in-out;
+}
+
+.navbar .nav-links a:hover {
+  color: #e01a4f;
+ 
+}
+
+.navbar .burger {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar .burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 50px;
+}
+
+.content p {
+  font-size: 20px;
+}
+
+.content a {
+  display: inline-block;
+  text-decoration: none;
+ padding: 10px 20px;
+ 
+  border-radius: 20px 0;
+  border: 0;
+ 
+  background-color: #fd2f64;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.content  a:hover {
+  background-color: #730321;
+  border-radius: 10px 0;
+}
+
+.titleSection {
+  font-size: 25px;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.teams,
+.booking,
+.contact {
+  padding: 20px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team {
+ border-radius: 6px;
+ box-shadow: 6px 6px 18px 0px #2222221c;
+  width: calc(33% - 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+ 
+}
+
+.team p {
+  text-align: center;
+  line-height: 1.8;
+  font-size: 19px;
+}
+
+.team .imgContainer {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  font-size: 22px;
+  font-weight: bold;
+  position: relative;
+}
+
+.team img {
+  width: 100%;
+  height: 100%;
+ 
+  transition: all 0.3s ease;
+}
+
+.team:hover img {
+  transform: scale(1.1);
+}
+
+.team .titleContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  opacity: 0;
+}
+
+.team:hover .titleContainer {
+  opacity: 1;
+}
+
+.contants {
+  text-align: left;
+  width: 100%;
+  direction: rtl;
+}
+ 
+
+.contants p {
+  margin: 5px 0;
+}
+
+.booking .box {
+  width: calc(25% - 20px);
+  height: 150px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+.booking .box .count {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fd2f64;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+
+}
+.booking .box p{
+  font-size: 19px;
+}
+
+.contact .image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+
+}
+@media (max-width: 768px) {
+  .flex{
+    flex-direction: column;
+  }
+}
+
+.contact .textBox {
+  text-align: center;
+  font-size: 19px;
+   
+}
+
+ 
+
+.contact .contacts p {
+  font-size: 22px;
+
+  margin: 5px 0;
+}
+.contact .contacts p span{
+   font-weight: bold;
+}
+
+.contact .plastchild {
+  text-align: center;
+  color: #e01a4f;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar .nav-links {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: -50rem;
+    background-color: #000000d4;
+    backdrop-filter: blur(7px);
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    transition: all 0.5s ease;
+  }
+
+  .navbar .nav-links.active {
+    top: 0;
+  }
+
+  .navbar .burger {
+    display: block;
+  }
+
+  .navbar .burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .navbar .burger.toggle .line2 {
+    opacity: 0;
+  }
+
+  .navbar .burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .content h1 {
+    font-size: 30px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+
+  .content button {
+    width: 120px;
+    height: 35px;
+  }
+
+  .teams,
+  .booking,
+  .contact {
+    padding: 20px;
+  }
+
+  .team {
+    width: calc(50% - 20px);
+  }
+
+  .booking .box {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 780px) {
+  
+  .team {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar .nav-links {
+    z-index: -1;
+  }
+
+  .team {
+    width: 100%;
+  }
+
+  .booking .box {
+    width: 100%;
+  }
+}
+
+
+   /* By Eslam Ahmed Web Developer
+ Email  => aslamalmswdya@gmail.com // Whats Up => 01012966375   */
